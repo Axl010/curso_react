@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react';
+
 const firstName = 'Actcel';
 const lastName = 'Dev';
 
@@ -7,6 +9,13 @@ const isActive = true;
 const address = {
     zipCode: 'ABC-123',
     country: 'Canadá',
+}
+
+const myStyles: CSSProperties = {
+    backgroundColor: '#aaa',
+    borderRadius: isActive ? 10 : 20,
+    padding: 10,
+    marginTop: 40,
 }
 
 export function MyAwesomeApp() {
@@ -20,7 +29,9 @@ export function MyAwesomeApp() {
 
             <h2>{isActive ? 'Activo' : 'No activo'}</h2> {/*Los valores internos no generan codigo interno en REACT*/}
         
-            <p>{JSON.stringify(address)}</p>
+            <p
+                style={ myStyles }
+            >{JSON.stringify(address)}</p>
         </>
     );
-}
+} 
