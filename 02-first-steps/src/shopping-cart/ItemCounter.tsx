@@ -1,6 +1,16 @@
 import React from 'react'
 
-export const ItemCounter = () => {
+interface Props {
+  name: string;
+  quantity?: number;
+}
+
+export const ItemCounter = ({ name, quantity }: Props) => {
+  
+  const handleCLick = () => {
+    console.log(`Click ${name}`);
+  }
+
   return (
     <section style = {{
             display: 'flex',
@@ -11,10 +21,15 @@ export const ItemCounter = () => {
         <span style={{
                 width: 150,
             }}>
-                Nintendo Switch 2
+                {name}
         </span>
-        <button>+1</button>
-        <span>10</span>
+        <button
+          onMouseEnter={ () => {
+            console.log(`Mouse enter ${name}`)
+          }}
+          onClick={handleCLick} // Refactorizado
+        >+1</button>
+        <span>{quantity}</span>
         <button>-1</button>
     </section>
   )
