@@ -20,7 +20,9 @@ const myStyles: CSSProperties = {
 
 export function MyAwesomeApp() {
     return (
-        <>
+        <div 
+            data-testid="div-app"
+        >
             <hr />
             <h2> {firstName} </h2>
             <h3> {lastName} </h3>
@@ -32,6 +34,6 @@ export function MyAwesomeApp() {
             <p
                 style={ myStyles }
             >{JSON.stringify(address)}</p>
-        </>
+        </div>
     );
 } 
