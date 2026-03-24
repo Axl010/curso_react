@@ -31,7 +31,6 @@ export const SearchBar = ({ placeholder = 'Buscar', onQuery }: Props) => {
 
   return (
     <div className="search-container">
-        <h1>{query}</h1>
         <input
           type="text"
           placeholder={ placeholder }
