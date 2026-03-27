@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 export const useCounter = ( initialValue: number = 10 ) => {
 
